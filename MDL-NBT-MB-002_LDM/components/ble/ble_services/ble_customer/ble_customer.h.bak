@@ -1,0 +1,14 @@
+#ifndef BLE_CUSTOMER_H__
+#define BLE_CUSTOMER_H__
+
+#include <stdint.h>
+#include <stdbool.h>
+#include "ble.h"
+#include "ble_srv_common.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+#endif  //BLE_CUSTOMER_H__
