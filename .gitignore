@@ -13,3 +13,11 @@ MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040_debug/arm5_no_packs/_build
 MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040_debug/arm5_no_packs/secure_dfu_secure_dfu_ble_s132_pca10040_debug.uvoptx
 MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040_debug/arm5_no_packs/secure_dfu_secure_dfu_ble_s132_pca10040_debug.uvguix.*
 MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040_debug/arm5_no_packs/JLinkLog.txt
+
+BUILD/application.build_log.htm
+BUILD/application.hex
+BUILD/c_build/.gradle
+BUILD/output
+BUILD/蓝牙烧录.bat
+.DS_Store
+BUILD/README.md
