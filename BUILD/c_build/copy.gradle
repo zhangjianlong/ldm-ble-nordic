@@ -1,0 +1,70 @@
+
+ext {
+    BUILD_ENV = ""
+    BUILD_NUM = ""
+    BUILD_DIR = ""
+    COPY_DIR = ""
+}
+
+
+task copyBuildFile(type: Copy) {
+    createParams()
+    createApkParams()
+	def batPath = projectDir.parent+File.separator+"蓝牙烧录.bat";
+	def zipPath = projectDir.parent+File.separator+"output"+File.separator+"application-dfu-packet.zip";
+	def zipV2Path = projectDir.parent+File.separator+"output"+File.separator+"bootloader-dfu-packet-v2.zip";
+	def hexPath = projectDir.parent+File.separator+"output"+File.separator+"output.hex";
+	
+	System.out.println("batPath:" + zipPath)
+	System.out.println("zipV2Path:" + zipV2Path)
+	System.out.println("hexPath:" + hexPath)
+	System.out.println("COPY_DIR:" + COPY_DIR)
+    from "${batPath}"
+	 from "${zipPath}"
+    from "${zipV2Path}"
+    from "${hexPath}"
+     into "${COPY_DIR}"
+
+}
+
+
+
+/**
+ * 创建APK 目录，以及APK打包的参数
+ */
+def createParams() {
+    BUILD_NUM =  project.findProperty('BuildNum')
+    Properties properties = new Properties()
+    InputStream inputStream = project.file('build.properties').newDataInputStream()
+    BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
+    properties.load(bf);
+
+    BUILD_DIR = properties.getProperty("BUILD_DIR")
+    File file = new File(BUILD_DIR)
+    if (!file.exists()) {
+        file.mkdirs()
+		  System.out.println("BUILD_DIR:"+BUILD_DIR + file.exists())
+    }
+    inputStream.close()
+    bf.close()
+    System.out.println("BUILD_DIR:" + BUILD_DIR)
+    System.out.println("BUILD_NUM:" + BUILD_NUM)
+}
+
+
+
+def createApkParams() {
+    def apkSaveDir = BUILD_DIR + File.separator + BUILD_NUM
+    File apkDir = new File(apkSaveDir)
+    COPY_DIR = apkSaveDir
+    if (apkDir.exists()) {
+        apkDir.deleteDir()
+    }else{
+         apkDir.mkdirs()
+    }
+	 System.out.println("apkSaveDir:"+apkSaveDir + apkDir.exists())
+
+}
+
+
+

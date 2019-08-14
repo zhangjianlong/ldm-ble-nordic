@@ -1,0 +1,60 @@
+
+task build {
+	def outputPth = projectDir.parent+File.separator+"output";
+	File outputDir = new File(outputPth)
+	deleteFiles(outputDir)
+	def applicationHexPath = projectDir.parent+File.separator+"application.hex";
+	deleteFile(applicationHexPath)
+	def logFilePath = projectDir.parent+File.separator+"application.build_log.htm";
+	deleteFile(logFilePath)
+	def batFile =  projectDir.parent+File.separator+"蓝牙烧录.bat";
+	deleteFile(batFile)
+    // String scriptPath =   projectDir.parent
+    // String endString = scriptPath.substring(scriptPath.length()-5)
+    // if (endString.equals("BUILD")) {
+    //     scriptPath = scriptPath.substring(0,scriptPath.length()-5)
+
+    // }  
+    def  cmd = 'cmd /C UV4 -r C:\\JENKINS_HOME\\workspace\\LDM-BLE-Nordic\\MDL-NBT-MB-002_LDM\\nwi\\ble_peripheral\\ble_app_proximity-own\\pca10040\\s132\\arm5_no_packs\\ble_app_proximity_pca10040_s132.uvprojx -t"nrf52832_custom"'
+	println cmd   
+	println cmd.execute().text;
+	println "test1"
+	File tmpFile = new File(applicationHexPath);
+	println(tmpFile.getName()+tmpFile.exists())
+	def createzipFile = "cmd /C blegen-runme_win.bat";
+	println "test2";
+	println createzipFile.execute(null,new File( projectDir.parent)).text;
+	println 'unix2dos "蓝牙烧录0.bat" "蓝牙烧录.bat"' .execute(null,new File( projectDir.parent)).text;
+		
+}
+
+
+def deleteFiles(File root){
+	println(root.getName()+root.exists())
+	if(!root.exists()){
+	root.mkdir()
+	return;
+	}
+	File[] filesList = root.listFiles();
+	for(File f:filesList){
+		if(f.isFile()){
+			f.delete();
+			println(f.getName()+" delete")
+		}else{
+		deleteFiles(f)
+		}
+	}
+}
+
+def deleteFile(String filePath){
+	File tmpFile = new File(filePath);
+	if(tmpFile.exists()&&tmpFile.isFile()){
+		tmpFile.delete();
+		println(tmpFile.getName()+" delete")
+	}
+
+}
+
+
+
+
