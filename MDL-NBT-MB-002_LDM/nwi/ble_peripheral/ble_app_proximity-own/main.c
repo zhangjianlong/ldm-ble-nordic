@@ -156,6 +156,16 @@ const nrf_drv_timer_t TIMER_LED = NRF_DRV_TIMER_INSTANCE(1);
 #define PTI_DEVICE_TLM330s			0X0506
 #define PTI_DEVICE_DW0165S_DW03050   	0X0207
 #define PTI_DEVICE_DW0330S_DW03101   	0X0307
+
+
+#define PTI_DEVICE_NLR30B 0X0106
+
+#define PTI_DEVICE_NLR50B 0X0206
+
+#define PTI_DEVICE_NLR50X PTI_DEVICE_TLM165s
+
+
+
 #define PTI_DEVICE_NWITOOL   			0X0000
 
 #define BRAND_NAME_NWI		"Northwest Instrument Inc."	
@@ -242,7 +252,7 @@ g_ble_device_type_t g_ble_device_type;
 uint8_t g_batt_level = 100;
 uint8_t g_enter_boot_flag ;
 
-#define BLE_FW_REV                            "NBT-MB-002_A20_B02 V1.10.0"
+#define BLE_FW_REV                            "NBT-MB-002_A20_B02 V1.20.1"	//B03for new NWi LDMs.
 #define BLE_HW_REV                            "NBT-MB-002_A20 V0.2"
 
 								  
@@ -2161,6 +2171,12 @@ static void find_device_pti(void)
 				case PTI_DEVICE_TLM330s:
 				case PTI_DEVICE_DW0165S_DW03050:
 				case PTI_DEVICE_DW0330S_DW03101:
+					
+				case PTI_DEVICE_NLR30B:
+					
+				
+				case PTI_DEVICE_NLR50B:
+				//case PTI_DEVICE_NLR50X://- same to PTI_DEVICE_TLM165s
 					g_ble_device_type = LDM;
 					ble_adv_mode = BLE_ADV_MODE_FAST;
 					m_app_adv_interval_fast = APP_ADV_INTERVAL_FAST_400_MS;
