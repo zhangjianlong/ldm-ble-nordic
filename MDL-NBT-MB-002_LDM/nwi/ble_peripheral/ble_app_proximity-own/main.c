@@ -120,6 +120,8 @@
 #include "ble_hts.h"
 #include "nrf_dfu_settings.h"
 
+#include "nrf_temp.h"
+
 //const uint32_t UICR_ADDR_0x18 __attribute__((at(0x10001018))) __attribute__((used)) = 0x0007E000;
 
 #define HPP_NEW_FUNCTION_CONTROL TURE
@@ -311,7 +313,7 @@ uint16_t safe_login_timeout;
 uint8_t wait_safe_login_flag;
 g_device_time_t g_device_time =
 {
-	2018, 1, 1, 0, 0, 0
+	.year = 2018, .month = JANUARY, .day = 1, .hour = 0, .minute = 0, .second = 0,
 };
 
 #if USER_MEM_EN
@@ -610,7 +612,7 @@ static void wireless_recv_timeout_handle(void *p_context)
 		cnt = RFPacketReceived(g_rf_buffer.recv_data);
 		//test
 		static uint16_t dbg_cnt2 = 0;
-		static uint8_t ItStatus1, ItStatus2, ItEn1, ItEn2;
+		volatile uint8_t ItStatus1, ItStatus2, ItEn1, ItEn2;
 		if((g_rf_buffer.recv_data[1] == 0x05/*g_rf_buffer.recv_data[2]*/) \
 		&& (g_rf_buffer.recv_data[2] == 0x05/*g_rf_buffer.recv_data[3]*/) \
 		&& (g_rf_buffer.recv_data[3] == 0x05/*g_rf_buffer.recv_data[4]*/))
@@ -2205,7 +2207,7 @@ static void find_deviceid(void)
 	fds_flash_record_t rec_flash;
 	ret_code_t         ret;
 	ble_gap_addr_t mac_addr;
-	ble_gap_addr_t ble_gap_addr;
+	//ble_gap_addr_t ble_gap_addr;
 	uint32_t err_code;
 
 	fds_find_token_t ftok;
@@ -2339,6 +2341,8 @@ int main(void)
 	nrf_gpio_cfg_input(TX_PIN_NUMBER, NRF_GPIO_PIN_NOPULL);
 	nrf_gpio_cfg_input(RX_PIN_NUMBER, NRF_GPIO_PIN_NOPULL);
 #endif
+	
+	nrf_temp_init();
 	
 #if USER_MEM_EN
 	m_mem_block.p_mem = &m_user_mem[0];

@@ -863,9 +863,20 @@ void uart_cmd_event(stru_usart_data_t *ptr)
 			g_send_data(notibuf, pos, BLUETOOTH_NOTI_EVT);
 			memset(notibuf, 0 ,50);
 		}
+		else if(memcmp(ptr->data+6, "getTemperature?", strlen("getTemperature?")) == 0)
+		{
+			int32_t rt_temperature = 0;
+			sd_temp_get(&rt_temperature);
+			rt_temperature = rt_temperature / 4;
+			memset(notibuf, 0 ,50);
+			
+			sprintf((char *)notibuf, "{mode+getTemperature=%04d}", rt_temperature);
+			g_send_data(notibuf, strlen((char *)notibuf), USART);
+			memset(notibuf, 0 ,50);
+		}
 		else
 		{
-			uart_send_string("error", 5);
+			uart_send_string((uint8_t* )"error", 5);
 		}
 	}/*"mode+"*/
 	else

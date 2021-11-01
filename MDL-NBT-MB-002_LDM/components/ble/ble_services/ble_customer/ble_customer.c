@@ -321,7 +321,8 @@ static void on_disconnect(ble_custom_t *p_custom, ble_evt_t *p_ble_evt)
 
 static void on_write(ble_custom_t *p_custom, ble_evt_t *p_ble_evt)
 {
-	uint32_t err_code;
+	
+	volatile uint32_t err_code;
 	
 	ble_gatts_evt_write_t *p_evt_write = &p_ble_evt->evt.gatts_evt.params.write;
 	
@@ -396,7 +397,8 @@ static void on_write(ble_custom_t *p_custom, ble_evt_t *p_ble_evt)
 
 void ble_custom_on_ble_evt(ble_custom_t *p_custom, ble_evt_t *p_ble_evt)
 {
-	uint32_t err_code;
+	
+	volatile uint32_t err_code;
 	
 	if((p_custom == NULL) || (p_ble_evt == NULL))
 	{
