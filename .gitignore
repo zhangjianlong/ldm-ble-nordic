@@ -1,23 +1,28 @@
+*.exe
+*.pdf
+*.lib
+*.a
+*.htm*
+*.png
+*.zip
+*.xls
+*.d
+*.o
+*.uvguix.*
+*.uvoptx
+*.gif
+*.docx
+*.DS_Store
+*.hex.*
+*.zip.*
+*.axf
+*.dep
 
-MDL-NBT-MB-002_LDM/nwi/ble_peripheral/ble_app_proximity-own/pca10040/s132/arm5_no_packs/_build/*
-MDL-NBT-MB-002_LDM/nwi/ble_peripheral/ble_app_proximity-own/pca10040/s132/arm5_no_packs/ble_app_proximity_pca10040_s132.uvoptx
-MDL-NBT-MB-002_LDM/nwi/ble_peripheral/ble_app_proximity-own/pca10040/s132/arm5_no_packs/ble_app_proximity_pca10040_s132.uvguix.*
-MDL-NBT-MB-002_LDM/nwi/ble_peripheral/ble_app_proximity-own/pca10040/s132/arm5_no_packs/JLinkLog.txt
 
-MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040/arm5_no_packs/_build/*
-MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040/arm5_no_packs/secure_dfu_secure_dfu_ble_s132_pca10040.uvoptx
-MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040/arm5_no_packs/secure_dfu_secure_dfu_ble_s132_pca10040.uvguix.*
-MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040/arm5_no_packs/JLinkLog.txt
 
-MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040_debug/arm5_no_packs/_build/*
-MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040_debug/arm5_no_packs/secure_dfu_secure_dfu_ble_s132_pca10040_debug.uvoptx
-MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040_debug/arm5_no_packs/secure_dfu_secure_dfu_ble_s132_pca10040_debug.uvguix.*
-MDL-NBT-MB-002_LDM/nwi/dfu/bootloader_secure/pca10040_debug/arm5_no_packs/JLinkLog.txt
 
-BUILD/application.build_log.htm
-BUILD/application.hex
-BUILD/c_build/.gradle
-BUILD/output
-BUILD/蓝牙烧录.bat
-.DS_Store
-BUILD/README.md
+
+*.lnp
+*.map
+*.sct
+*.lst
