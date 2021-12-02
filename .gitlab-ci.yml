@@ -16,7 +16,7 @@ build:
   # before_script:
   #   - apt update && apt -y install make autoconf
   script:
-    - g++ helloworld.cpp -o mybinary
+    - ls
   artifacts:
     paths:
       - mybinary
