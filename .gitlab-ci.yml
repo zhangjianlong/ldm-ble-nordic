@@ -18,8 +18,8 @@ build:
   script:
     - cp C:/GitLab-Runner/nrfutil.exe ./nrfutil.exe
     - ./"PkgGen - 832.bat"
-    - cp *.zip ./BUILD
-    - cp *.hex ./BUILD
+    - cp ./PkgGenOutput/*.zip ./BUILD
+    - cp ./PkgGenOutput/*.hex ./BUILD
   artifacts:
     paths:
       - BUILD
