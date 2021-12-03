@@ -18,9 +18,11 @@ build:
   script:
     - cp C:/GitLab-Runner/nrfutil.exe ./nrfutil.exe
     - ./"PkgGen - 832.bat"
+    - cp *.zip /BUILD
+    - cp *.hex /BUILD
   artifacts:
     paths:
-      - mybinary
+      - BUILD
       # depending on your build setup it's most likely a good idea to cache outputs to reduce the build time
       # cache:
       #   paths:
