@@ -16,9 +16,8 @@ build:
   # before_script:
   #   - apt update && apt -y install make autoconf
   script:
-    - ls
     - cp C:/GitLab-Runner/nrfutil.exe ./nrfutil.exe
-    - ls
+    - ./PkgGen - 832.bat
   artifacts:
     paths:
       - mybinary
