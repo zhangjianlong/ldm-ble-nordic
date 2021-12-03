@@ -18,6 +18,7 @@ build:
   script:
     - ls
     - cp C:/GitLab-Runner/nrfutil.exe ./nrfutil.exe
+    - ls
   artifacts:
     paths:
       - mybinary
