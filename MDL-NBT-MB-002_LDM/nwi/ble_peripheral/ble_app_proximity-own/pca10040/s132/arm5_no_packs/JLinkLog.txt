@@ -1,0 +1,96 @@
+T0178 000:177.344   SEGGER J-Link V7.50a Log File
+T0178 000:177.480   DLL Compiled: Jul  8 2021 18:16:52
+T0178 000:177.488   Logging started @ 2023-08-17 03:02
+T0178 000:177.495 - 177.499ms
+T0178 000:177.508 JLINK_SetWarnOutHandler(...)
+T0178 000:177.517 - 0.013ms
+T0178 000:177.526 JLINK_OpenEx(...)
+T0178 000:179.096   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T0178 000:179.492   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T0178 000:179.727   Decompressing FW timestamp took 183 us
+T0178 000:186.237   Hardware: V9.20
+T0178 000:186.267   S/N: 4294967295
+T0178 000:186.279   OEM: SEGGER
+T0178 000:186.290   Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash
+T0178 000:187.408   TELNET listener socket opened on port 19021
+T0178 000:187.639   WEBSRV Starting webserver
+T0178 000:187.905   WEBSRV Webserver running on local port 19080
+T0178 000:187.939 - 10.416ms returns "O.K."
+T0178 000:187.960 JLINK_GetEmuCaps()
+T0178 000:187.978 - 0.023ms returns 0xB9FF7BBF
+T0178 000:187.994 JLINK_TIF_GetAvailable(...)
+T0178 000:188.184 - 0.197ms
+T0178 000:188.201 JLINK_SetErrorOutHandler(...)
+T0178 000:188.228 - 0.031ms
+T0178 000:188.254 JLINK_ExecCommand("ProjectFile = "D:\workSpace\c_project\ldm-ble-nordic\MDL-NBT-MB-002_LDM\nwi\ble_peripheral\ble_app_proximity-own\pca10040\s132\arm5_no_packs\JLinkSettings.ini"", ...). 
+T0178 000:203.414   Ref file found at: C:\Keil_v5\ARM\Segger\JLinkDevices.ref
+T0178 000:203.624   XML referenced by ref file: C:\Program Files\SEGGER\JLink\JLinkDevices.xml
+T0178 000:204.777   C:\Program Files\SEGGER\JLink\JLinkDevices.xml evaluated successfully.
+T0178 000:294.220 - 105.978ms returns 0x00
+T0178 000:294.273 JLINK_ExecCommand("Device = nRF52832_xxAA", ...). 
+T0178 000:294.568   Device "NRF52832_XXAA" selected.
+T0178 000:297.231 - 2.959ms returns 0x00
+T0178 000:297.257 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T0178 000:297.311 - 0.027ms returns 0x01
+T0178 000:297.443 JLINK_GetHardwareVersion()
+T0178 000:297.457 - 0.018ms returns 92000
+T0178 000:297.467 JLINK_GetDLLVersion()
+T0178 000:297.481 - 0.017ms returns 75001
+T0178 000:297.490 JLINK_GetOEMString(...)
+T0178 000:297.502 JLINK_GetFirmwareString(...)
+T0178 000:297.510 - 0.011ms
+T0178 000:297.526 JLINK_GetDLLVersion()
+T0178 000:297.533 - 0.011ms returns 75001
+T0178 000:297.543 JLINK_GetCompileDateTime()
+T0178 000:297.550 - 0.011ms
+T0178 000:297.561 JLINK_GetFirmwareString(...)
+T0178 000:297.569 - 0.010ms
+T0178 000:297.579 JLINK_GetHardwareVersion()
+T0178 000:297.586 - 0.010ms returns 92000
+T0178 000:297.596 JLINK_GetSN()
+T0178 000:297.605 - 0.013ms returns -1
+T0178 000:297.615 JLINK_GetOEMString(...)
+T0178 000:297.627 JLINK_TIF_Select(JLINKARM_TIF_JTAG)
+T0178 000:299.029 - 1.417ms returns 0x00
+T0178 000:299.054 JLINK_HasError()
+T0178 000:299.072 JLINK_SetSpeed(5000)
+T0178 000:299.240 - 0.178ms
+T0178 000:299.638 JLINK_HasError()
+T0178 000:299.661 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T0178 000:299.669 - 0.012ms returns JLINKARM_RESET_TYPE_NORMAL
+T0178 000:299.679 JLINK_Reset()
+T0178 000:300.009   InitTarget() start
+T0178 000:300.032    J-Link Script File: Executing InitTarget()
+T0178 000:301.892   InitTarget() end
+T0178 000:302.970   TotalIRLen = ?, IRPrint = 0x..000000000000000000000000
+T0178 000:454.589   InitTarget() start
+T0178 000:454.619    J-Link Script File: Executing InitTarget()
+T0178 000:461.883   InitTarget() end
+T0178 000:463.325   TotalIRLen = ?, IRPrint = 0x..000000000000000000000000
+T0178 000:463.803 - 164.142ms
+T0178 000:463.846 JLINK_GetIdData(pIdData)
+T0178 000:464.164   InitTarget() start
+T0178 000:464.199    J-Link Script File: Executing InitTarget()
+T0178 000:466.646   InitTarget() end
+T0178 000:467.816   TotalIRLen = ?, IRPrint = 0x..000000000000000000000000
+T0178 000:619.998   InitTarget() start
+T0178 000:620.064    J-Link Script File: Executing InitTarget()
+T0178 000:622.763   InitTarget() end
+T0178 000:624.242   TotalIRLen = ?, IRPrint = 0x..000000000000000000000000
+T0178 000:624.750 - 160.934ms
+T0178 000:624.818 JLINK_GetIdData(pIdData)
+T0178 000:625.273   InitTarget() start
+T0178 000:625.335    J-Link Script File: Executing InitTarget()
+T0178 000:627.947   InitTarget() end
+T0178 000:629.185   TotalIRLen = 0, IRPrint = 0x00
+T0178 000:780.535   InitTarget() start
+T0178 000:780.612    J-Link Script File: Executing InitTarget()
+T0178 000:783.524   InitTarget() end
+T0178 000:785.175   TotalIRLen = ?, IRPrint = 0x..000000000000000000000000
+T0178 000:785.673 - 160.891ms
+T0178 000:802.262 JLINK_GetFirmwareString(...)
+T0178 000:802.316 - 0.068ms
+T0178 002:934.800 JLINK_Close()
+T0178 002:969.340 - 34.560ms
+T0178 002:969.366   
+T0178 002:969.374   Closed
